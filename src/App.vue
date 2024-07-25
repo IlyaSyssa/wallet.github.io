@@ -16,10 +16,9 @@
     Expence {{  }}
   </div>
   <div class="expenceTable">
-    <div class="expence-item-grid"></div>
-    <div class="expence-item-grid"></div>
-    <div class="expence-item-grid"></div>
-    <div class="expence-item-grid"></div>
+    <div class="expence-item-grid">в</div>
+    <div class="expence-item-grid">ы</div>
+    <div class="expence-item-grid">ы</div>
     <div class="expence-item-grid"></div>
     <div class="expence-item-grid"></div>
   </div>
@@ -123,7 +122,7 @@ const finishEditing = () => {
   width: 100%;
   height: 300px;
   background-color: #D9D9D9; /* Черный цвет с 50% прозрачности */
-  
+  gap: 110px;
   /* Центрирование по горизонтали и выравнивание по вертикали с walletIcon */
   position: fixed;
   top: 250px; /* Уровень по вертикали с walletIcon */
@@ -137,6 +136,15 @@ const finishEditing = () => {
   /* Грид занимает всю высоту и ширину .balanceCard */
 }
 .expence-item-grid {
-
+  width: 225px;
+  height: 225px;
+  background-color: rgba(178, 204, 29, 0.493);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: none; /* Удаление границ для невидимых разделений */
 }
 </style>
