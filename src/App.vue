@@ -16,11 +16,31 @@
     Expence {{  }}
   </div>
   <div class="expenceTable">
-    <div class="expence-item-grid">в</div>
-    <div class="expence-item-grid">ы</div>
-    <div class="expence-item-grid">ы</div>
-    <div class="expence-item-grid"></div>
-    <div class="expence-item-grid"></div>
+    <div class="expence-item-grid1">
+      <div class="expence-item-raw1">Food & Drink</div>
+      <div class="expence-item-raw2"><img class="expence-png" src="./components/icons/free-icon-food-serving-3081078.png"></div>
+      <div class="expence-item-raw3"></div>
+    </div>
+    <div class="expence-item-grid2">
+      <div class="expence-item-raw1">Transportation</div>
+      <div class="expence-item-raw2"><img class="expence-png" src="./components/icons/free-icon-transportation-10183019.png"></div>
+      <div class="expence-item-raw3"></div>
+    </div>
+    <div class="expence-item-grid3">
+      <div class="expence-item-raw1">Personal care</div>
+      <div class="expence-item-raw2"><img class="expence-png" src="./components/icons/free-icon-care-8391984.png"></div>
+      <div class="expence-item-raw3"></div>
+    </div>
+    <div class="expence-item-grid4">
+      <div class="expence-item-raw1">Shopping</div>
+      <div class="expence-item-raw2"><img class="expence-png" src="./components/icons/free-icon-shopping-cart-1124198.png"></div>
+      <div class="expence-item-raw3"></div>
+    </div>
+    <div class="expence-item-grid5">
+      <div class="expence-item-raw1"></div>
+      <div class="expence-item-raw2">+</div>
+      <div class="expence-item-raw3"></div>
+    </div>
   </div>
 </template>
 
@@ -135,10 +155,11 @@ const finishEditing = () => {
   grid-template-columns: repeat(5, 1fr); /* Три столбца одинаковой ширины */
   /* Грид занимает всю высоту и ширину .balanceCard */
 }
-.expence-item-grid {
+.expence-item-grid1 {
+  text-align: center;
   width: 225px;
   height: 225px;
-  background-color: rgba(178, 204, 29, 0.493);
+  background-color: #FBFF45;
   border-radius: 24px;
   display: flex;
   justify-content: center;
@@ -146,5 +167,75 @@ const finishEditing = () => {
   color: rgb(0, 0, 0);
   font-size: 20px;
   border: none; /* Удаление границ для невидимых разделений */
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+.expence-item-grid2 {
+  text-align: center;
+  width: 225px;
+  height: 225px;
+  background-color: #52A1FF;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: none; /* Удаление границ для невидимых разделений */
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+.expence-item-grid3 {
+  text-align: center;
+  width: 225px;
+  height: 225px;
+  background-color: #B57AFF;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: none; /* Удаление границ для невидимых разделений */
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+.expence-item-grid4 {
+  text-align: center;
+  width: 225px;
+  height: 225px;
+  background-color: #FF3232;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: none; /* Удаление границ для невидимых разделений */
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+.expence-item-grid5 {
+  width: 225px;
+  height: 225px;
+  background-color: #fcff4581;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: none; /* Удаление границ для невидимых разделений */
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+.expence-png {
+  width: 80px;
+  height: 80px;
 }
 </style>
