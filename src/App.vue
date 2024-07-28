@@ -4,7 +4,7 @@
   <input v-else type="text" v-model="inputValue" @blur="finishEditing" @keyup.enter="finishEditing" class="userNameInput">
   <div class="balanceCard">
     <div class="grid-itemMoneyIcon">
-      <img class="bagIcon" src="./components/icons/free-icon-money-bag-3359187.png"
+      <img class="bagIcon" src="./components/icons/free-icon-money-bag-3359187.png">
     </div>
     <div class="grid-item">Balance {{  }}</div>
     <div class="grid-item">
@@ -19,28 +19,31 @@
     <div class="expence-item-grid1">
       <div class="expence-item-raw1">Food & Drink</div>
       <div class="expence-item-raw2"><img class="expence-png" src="./components/icons/free-icon-food-serving-3081078.png"></div>
-      <div class="expence-item-raw3"></div>
+      <div class="expence-item-raw3">{{  }}</div>
     </div>
     <div class="expence-item-grid2">
       <div class="expence-item-raw1">Transportation</div>
       <div class="expence-item-raw2"><img class="expence-png" src="./components/icons/free-icon-transportation-10183019.png"></div>
-      <div class="expence-item-raw3"></div>
+      <div class="expence-item-raw3">{{  }}</div>
     </div>
     <div class="expence-item-grid3">
       <div class="expence-item-raw1">Personal care</div>
       <div class="expence-item-raw2"><img class="expence-png" src="./components/icons/free-icon-care-8391984.png"></div>
-      <div class="expence-item-raw3"></div>
+      <div class="expence-item-raw3">{{  }}</div>
     </div>
     <div class="expence-item-grid4">
       <div class="expence-item-raw1">Shopping</div>
       <div class="expence-item-raw2"><img class="expence-png" src="./components/icons/free-icon-shopping-cart-1124198.png"></div>
-      <div class="expence-item-raw3"></div>
+      <div class="expence-item-raw3">{{  }}</div>
     </div>
     <div class="expence-item-grid5">
       <div class="expence-item-raw1"></div>
       <div class="expence-item-raw2">+</div>
       <div class="expence-item-raw3"></div>
     </div>
+  </div>
+  <div class="income">
+    Income {{  }}
   </div>
 </template>
 
@@ -141,7 +144,7 @@ const finishEditing = () => {
 .expenceTable {
   width: 100%;
   height: 300px;
-  background-color: #D9D9D9; /* Черный цвет с 50% прозрачности */
+ /* Черный цвет с 50% прозрачности */
   gap: 110px;
   /* Центрирование по горизонтали и выравнивание по вертикали с walletIcon */
   position: fixed;
@@ -220,6 +223,7 @@ const finishEditing = () => {
   grid-template-columns: 1fr;
 }
 .expence-item-grid5 {
+  text-align: center;
   width: 225px;
   height: 225px;
   background-color: #fcff4581;
@@ -237,5 +241,22 @@ const finishEditing = () => {
 .expence-png {
   width: 80px;
   height: 80px;
+}
+.income {
+  width: 422px;
+  height: 84px;
+  border-radius: 24px;
+  background-color: #D9D9D9; /* Цвет фона */
+  position: fixed;
+  top: 650px; /* Уровень по вертикали */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Flexbox для центрирования текста */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
 }
 </style>
