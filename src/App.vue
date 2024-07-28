@@ -45,6 +45,23 @@
   <div class="income">
     Income {{  }}
   </div>
+  <div class="incomeTable">
+    <div class="income-item-grid1">
+      <div class="income-item-raw1">Food & Drink</div>
+      <div class="income-item-raw2"><img class="expence-png" src="./components/icons/free-icon-food-serving-3081078.png"></div>
+      <div class="income-item-raw3">{{  }}</div>
+    </div>
+    <div class="income-item-grid2">
+      <div class="income-item-raw1">Transportation</div>
+      <div class="income-item-raw2"><img class="expence-png" src="./components/icons/free-icon-transportation-10183019.png"></div>
+      <div class="income-item-raw3">{{  }}</div>
+    </div>
+    <div class="income-item-grid3">
+      <div class="income-item-raw1">Personal care</div>
+      <div class="income-item-raw2"><img class="expence-png" src="./components/icons/free-icon-care-8391984.png"></div>
+      <div class="income-item-raw3">{{  }}</div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -157,6 +174,7 @@ const finishEditing = () => {
   grid-template-rows: 1fr; /* Одна строка, занимающая всю высоту */
   grid-template-columns: repeat(5, 1fr); /* Три столбца одинаковой ширины */
   /* Грид занимает всю высоту и ширину .balanceCard */
+  display: flex;
 }
 .expence-item-grid1 {
   text-align: center;
@@ -258,5 +276,71 @@ const finishEditing = () => {
   align-items: center;
   font-size: 20px;
   text-align: center;
+}
+.incomeTable {
+  width: 100%;
+  height: 300px;
+ /* Черный цвет с 50% прозрачности */
+  gap: 110px;
+  /* Центрирование по горизонтали и выравнивание по вертикали с walletIcon */
+  position: fixed;
+  top: 760px; /* Уровень по вертикали с walletIcon */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* CSS Grid */
+  display: grid;
+  grid-template-rows: 1fr; /* Одна строка, занимающая всю высоту */
+  grid-template-columns: repeat(5, 1fr); /* Три столбца одинаковой ширины */
+  /* Грид занимает всю высоту и ширину .balanceCard */
+  display: flex;
+}
+.income-item-grid1 {
+  text-align: center;
+  width: 449px;
+  height: 112px;
+  background-color: #45F2A9;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: none; /* Удаление границ для невидимых разделений */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+.income-item-grid2 {
+  text-align: center;
+  width: 449px;
+  height: 112px;
+  background-color: #61F55E;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: none; /* Удаление границ для невидимых разделений */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+.income-item-grid3 {
+  text-align: center;
+  width: 449px;
+  height: 112px;
+  background-color: #D9D9D9;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  border: none; /* Удаление границ для невидимых разделений */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 </style>
