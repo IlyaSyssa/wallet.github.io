@@ -94,14 +94,17 @@ const finishEditing = () => {
   margin-left: 100px;
   margin-top: 35px;
   font-size: 20px;
+  position: fixed;
 }
 
 .userName {
   cursor: pointer;
+  position: fixed;
 }
 
 .userNameInput {
   font-size: 20px; 
+  position: fixed;
 }
 
 .balanceCard {
@@ -137,8 +140,10 @@ const finishEditing = () => {
   width: 67px;
 }
 .lineUp {
-  position: relative;
-  top: 35px;
+  position: fixed;
+            top: 95px;
+            width: 100%;
+            border: 1px solid black; 
  
 }
 .expence {
@@ -175,6 +180,7 @@ const finishEditing = () => {
   grid-template-columns: repeat(5, 1fr); /* Три столбца одинаковой ширины */
   /* Грид занимает всю высоту и ширину .balanceCard */
   display: flex;
+  justify-content: center; 
 }
 .expence-item-grid1 {
   text-align: center;
@@ -294,6 +300,8 @@ const finishEditing = () => {
   grid-template-columns: repeat(5, 1fr); /* Три столбца одинаковой ширины */
   /* Грид занимает всю высоту и ширину .balanceCard */
   display: flex;
+  justify-content: center; 
+ 
 }
 .income-item-grid1 {
   text-align: center;
@@ -343,4 +351,9 @@ const finishEditing = () => {
   grid-template-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
 }
+body, html {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(to bottom, #BDC3C7, #2C3E50);
+        }
 </style>
