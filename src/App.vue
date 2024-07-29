@@ -65,11 +65,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const userName = ref('Username');
 const isEditing = ref(false);
 const inputValue = ref(userName.value);
+
+// Восстанавливаем сохраненное имя пользователя при загрузке страницы
+onMounted(() => {
+  const savedUserName = localStorage.getItem('userName');
+  if (savedUserName) {
+    userName.value = savedUserName;
+  }
+});
 
 const startEditing = () => {
   isEditing.value = true;
@@ -79,7 +87,10 @@ const startEditing = () => {
 const finishEditing = () => {
   isEditing.value = false;
   userName.value = inputValue.value;
+  // Сохраняем имя пользователя в localStorage
+  localStorage.setItem('userName', userName.value);
 };
+
 </script>
 
 <style>
